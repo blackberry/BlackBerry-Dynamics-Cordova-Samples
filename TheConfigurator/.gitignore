@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+platforms/
+plugins/
+hooks/
+GoodDynamics.js
+
+www/cordova-js-src/
+www/cordova.js
+www/cordova_plugins.js
