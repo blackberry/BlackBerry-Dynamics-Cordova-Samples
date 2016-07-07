@@ -11,14 +11,14 @@ This is some text that explains the sample.
 * Android
 * iOS
 
-**Known Issues**
+**Dev Environment**
 
-* None
-
-**Platform Quirks**
-
-* None
-
+* Cordova v5.1.1
+* Cordova iOS v3.8.0
+* Cordova Android v4.0.2
+* Xcode v7.3
+* Android Studio 2.1.2
+* Good Dynamics SDK v2.3.1279
 
 ## How to build
 
