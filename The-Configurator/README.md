@@ -1,6 +1,6 @@
 ## The Configurator - App Policy Sample
 
-This sample pairs deomonstrates how to use a custom App Policy uploaded into the Good Control Console (GCC), which can be used to remotely configure an application.  
+This sample deomonstrates how to use a custom App Policy uploaded into the Good Control Console (GCC), which can be used to remotely configure an application.  
 
 After adding this sample to your GCC, you'll need to upload the included policy file **"The Configurator App Policy.xml"**.  
 
