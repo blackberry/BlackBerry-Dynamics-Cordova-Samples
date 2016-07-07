@@ -30,12 +30,12 @@ For more information refer to the following post on the BlackBerry Developer Blo
 
 ## How to build
 
-To build, test, and deploy this sample, please refer to the [Good Dynamics - Getting Started Guide](#) for Apache Cordova (PhoneGap) applications.
+To build, test, and deploy this sample, please refer to the [Good Dynamics - Getting Started Guide](http://developer.blackberry.com) for Apache Cordova (PhoneGap) applications.
 
 ## More Info
 
 * [Good Developer Network](https://community.good.com/welcome)
-* [Getting Started Guides](#)
+* [Getting Started Guides](http://developer.blackberry.com)
 
 ## Bug Reporting and Feature Requests
 
