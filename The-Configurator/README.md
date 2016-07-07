@@ -28,15 +28,6 @@ For more information refer to the following post on the BlackBerry Developer Blo
 
 * [Android Native](https://github.com/blackberry/Good-Dynamics-Android-Samples/tree/master/TheConfigurator)
 
-## How to build
-
-To build, test, and deploy this sample, please refer to the [Good Dynamics - Getting Started Guide](http://developer.blackberry.com) for Apache Cordova (PhoneGap) applications.
-
-## More Info
-
-* [Good Developer Network](https://community.good.com/welcome)
-* [Getting Started Guides](http://developer.blackberry.com)
-
 ## Bug Reporting and Feature Requests
 
 If you find a bug in a Sample, or have an enhancement request, simply file an [Issue](https://github.com/blackberry/Good-Dynamics-Cordova-Samples/issues) for the Sample.
