@@ -1,10 +1,8 @@
 ## The Configurator - App Policy Sample
 
-This sample pairs deomonstrates how to use a custom App Policy uploaded into the Good Control Console (GCC), which can be used to remotely configure an application.  
+This sample deomonstrates how to present the Change Password screen to a user using the Good Dynamics SDK.
 
 After adding this sample to your GCC, you'll need to upload the included policy file **"The Configurator App Policy.xml"**.  
-
-For more information refer to the following post on the BlackBerry Developer Blog: [Placeholder](#)
 
 **Author(s)**
 

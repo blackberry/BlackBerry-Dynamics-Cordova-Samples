@@ -1,6 +1,6 @@
 ## Good Dynamics - Getting Started Sample
 
-This is some text that explains the sample.
+This sample demonstrates the proper usage of the Good Dynamics SDK for Apache Cordova. It shows you the differences between the "before" and "after" apps and also how to use common APIs.
 
 **Author(s)**
 
