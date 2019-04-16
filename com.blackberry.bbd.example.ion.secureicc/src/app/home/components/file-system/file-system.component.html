@@ -1,0 +1,91 @@
+<!--
+/*
+* Copyright 2019 BlackBerry Ltd.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+-->
+
+<section class="filesystem-explorer">
+  <h2>Secure Storage</h2>
+
+  <div class="current-directory">
+    <h2 
+      *ngIf="isRoot" 
+      margin-start>
+      root:
+    </h2>
+    <h2 
+      *ngIf="!isRoot" 
+      margin-start>
+      {{currentDirectory.name}}:
+    </h2>
+  </div>
+
+  <ion-item 
+    button
+    detail="false" 
+    *ngIf="!isRoot"
+    (click)="handleParentDirectory()">
+    <p>
+      <b>...</b>
+    </p>
+  </ion-item>
+
+  <div *ngFor="let entry of currentDirectoryEntries; trackBy: trackByPath; let i = index">
+  
+    <ion-item
+      button 
+      class="folder-item"
+      *ngIf="entry.isDirectory"
+      (click)="openDirectoryByDirectoryEntry(entry)">
+      <ion-icon 
+        name="folder" 
+        color="warning">
+      </ion-icon>
+      <p margin-start>{{entry.name}}</p>
+      <ion-button
+        *ngIf="!readonlyDirectoriesPaths.includes(entry.fullPath)"
+        (click)="removeDirectoryRecursively($event, entry)"
+        slot="end">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+    
+    <ion-item
+      button 
+      class="file-item"
+      detail="false"
+      *ngIf="entry.isFile"
+      (click)="showFile(entry)">
+      <ion-icon 
+        name="document"
+        color="dark">
+      </ion-icon>
+      <p margin-start>{{entry.name}}</p>
+      <ion-button 
+        (click)="removeFile($event, entry)"
+        fill="outline"
+        slot="end">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+  </div>
+
+</section>
