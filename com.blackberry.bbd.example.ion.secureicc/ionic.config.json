@@ -1,0 +1,7 @@
+{
+  "name": "SecureICC",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

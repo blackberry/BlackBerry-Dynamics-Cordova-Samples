@@ -1,0 +1,12 @@
+This is a test data for test testfile-1.txt:
+
+!"#$%&'*+-/0123456789=?
+@ABCDEFGHIJKLMNOPQRSTUVWXYZ^_
+`abcdefghijklmnopqrstuvwxyz{|}~ 
+
+
+<!”№%:,.;()_+=-?/<0123456789§±
+АБВГДГҐДЄЖЗИІЇКЛМНОПСТУФХЦШЩЬЮЯ
+абвгдгґдєжзиіїклмнопстуфхцшщьюя
+
+https://www.google.com
