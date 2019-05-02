@@ -41,11 +41,31 @@ export class FileSystemService {
   createFile(filePath) {
     return new Promise((resolve, reject) => {
       const options = { create: true, exclusive: false };
-      this.gdFileSystem.root.getFile(filePath, options, file => {
-        resolve(file);
+
+      const createNewFile = () => {
+        this.gdFileSystem.root.getFile(filePath, options, file => {
+          resolve(file);
+        }, error => {
+          reject(error);
+        });
+      };
+
+      this.getFile(filePath).then(file => {
+        // DEVNOTE: if file exists - delete it and create new one
+        this.removeFile(file).then(() => {
+          createNewFile();
+        }, error => {
+          reject(error);
+        });
       }, error => {
-        reject(error);
+        // DEVNOTE: if file does not exist - create new one
+        if (error.code === 1) {
+          createNewFile();
+        } else {
+          reject(error);
+        }
       });
+
     });
   }
 
