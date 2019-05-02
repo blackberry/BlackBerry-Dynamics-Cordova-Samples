@@ -12,7 +12,7 @@ This sample application is written using the Ionic framework. It demonstrates us
 * BlackBerry Dynamics Cordova SDK 6.0 or later
 
 ## Author(s)
-* [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com)
+* [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
 
 **Contributing**
 *   To contribute code to this repository you must be
@@ -20,13 +20,17 @@ This sample application is written using the Ionic framework. It demonstrates us
 
 ## How To Build and Deploy
 * Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/latest)
-* Clone the repository
-* `$ cd <path-to-cloned-repo>` 
-* `$ npm install`
+* In `<path>/BlackBerry-Dynamics-Cordova-Samples/Secure-ICC/config.xml` update paths to BlackBerry Dynamics Cordova plugins:
+    - `spec` attribute of `plugin` tag for `cordova-plugin-bbd-*` should have a valid path 
+    - replace `../..` with full path to `BlackBerry_Dynamics_SDK_for_Cordova_<version>` package
+* `$ cd <path>/BlackBerry-Dynamics-Cordova-Samples/Secure-ICC`
+* `$ npm i`
+* For iOS:	
 * `$ ionic cordova platform add ios`
-* AND/OR
+* `$ ionic cordova build ios`
+* AND/OR for Android:
 * `$ ionic cordova platform add android`
-* `$ ionic cordova build`
+* `$ ionic cordova build android`
 * run the "SecureICC" application via IDE (Xcode/Android Studio) or using Ionic CLI 
 
 
