@@ -21,9 +21,7 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Platform, ModalController, NavParams } from '@ionic/angular';
-
 import { ReceiveFileModalComponent } from './components/receive-file-modal/receive-file-modal.component';
-
 import { TransferFileService } from './components/transfer-file/transfer-file.service';
 import { FileSystemService } from './components/file-system/file-system.service';
 import { MailToService } from './components/mail-to/mail-to.service';
