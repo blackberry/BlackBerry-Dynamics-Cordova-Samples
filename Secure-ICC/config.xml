@@ -84,10 +84,4 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="cordova-plugin-bbd-base" spec="../../plugins/cordova-plugin-bbd-base" />
-    <plugin name="cordova-plugin-bbd-storage" spec="../../plugins/cordova-plugin-bbd-storage" />
-    <plugin name="cordova-plugin-bbd-appkinetics" spec="../../plugins/cordova-plugin-bbd-appkinetics" />
-    <plugin name="cordova-plugin-bbd-interappcommunication" spec="../../plugins/cordova-plugin-bbd-interappcommunication" />
-    <plugin name="cordova-plugin-bbd-application" spec="../../plugins/cordova-plugin-bbd-application" />
-    <plugin name="cordova-plugin-bbd-mailto" spec="../../plugins/cordova-plugin-bbd-mailto" />
 </widget>

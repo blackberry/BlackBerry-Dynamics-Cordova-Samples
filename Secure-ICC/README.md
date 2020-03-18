@@ -8,8 +8,12 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Secure Storage Management
 
 ## Requirements
-* Ionic 4 or later
-* BlackBerry Dynamics Cordova SDK 6.0 or later
+* Node 10.x.x
+* Ionic 4
+* Cordova 9
+* Dynamics SDK for Cordova 7.0
+* Dynamics SDK for iOS 7.0+
+* Dynamics SDK for Android 7.0+
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
@@ -20,11 +24,11 @@ This sample application is written using the Ionic framework. It demonstrates us
 
 ## How To Build and Deploy
 * Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/latest)
-* In `<path>/BlackBerry-Dynamics-Cordova-Samples/Secure-ICC/config.xml` update paths to BlackBerry Dynamics Cordova plugins:
-    - `spec` attribute of `plugin` tag for `cordova-plugin-bbd-*` should have a valid path 
-    - replace `../..` with full path to `BlackBerry_Dynamics_SDK_for_Cordova_<version>` package
-* `$ cd <path>/BlackBerry-Dynamics-Cordova-Samples/Secure-ICC`
-* `$ npm i`
+* Move Secure-ICC application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
+* Open Secure-ICC in Terminal window:  
+`$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/Secure-ICC`
+* Install the plugin `cordova-plugin-bbd-configure` (for non-default options of Configure plugin installation see README.md at the root of `BlackBerry_Dynamics_SDK_for_Cordova_<version>`):  
+`$ ionic cordova plugin add <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/plugins/cordova-plugin-bbd-configure`
 * For iOS:	
 * `$ ionic cordova platform add ios`
 * `$ ionic cordova build ios`
