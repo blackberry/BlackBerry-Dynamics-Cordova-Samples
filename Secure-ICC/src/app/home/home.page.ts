@@ -55,7 +55,9 @@ export class HomePage implements OnInit, OnDestroy {
       this.checkAvailableFileToReceive();
 
       this.onResumeSubscriber = this.platform.resume.subscribe(() => {
-        this.checkAvailableFileToReceive();
+        // DEVNOTE: add some delay here, as file might be not ready yet for retrieving from ‘transfer-file’ service
+        // after flipping from file-sender app on iOS 13
+        setTimeout(() => { this.checkAvailableFileToReceive() }, 500);
       });
     });
 
