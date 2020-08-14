@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -57,7 +57,7 @@ export class HomePage implements OnInit, OnDestroy {
       this.onResumeSubscriber = this.platform.resume.subscribe(() => {
         // DEVNOTE: add some delay here, as file might be not ready yet for retrieving from ‘transfer-file’ service
         // after flipping from file-sender app on iOS 13
-        setTimeout(() => { this.checkAvailableFileToReceive() }, 500);
+        setTimeout(() => { this.checkAvailableFileToReceive() }, 1000);
       });
     });
 
@@ -125,6 +125,11 @@ declare global {
     requestFileSystem: any;
     plugins: any;
     DirectoryReader: any;
+    resolveLocalFileSystemURL: (
+      path: string,
+      successCallback: (dirEntry: any) => void,
+      errorCallback: (error: any) => void
+    ) => void;
   }
   var LocalFileSystem: any;
 }

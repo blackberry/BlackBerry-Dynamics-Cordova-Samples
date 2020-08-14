@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -37,7 +37,7 @@ export class TransferFileComponent implements OnInit {
     private modalCtrl: ModalController,
     private fileSystemService: FileSystemService
   ) { }
-  ROOT_PATH = '/';
+  ROOT_PATH;
   LOCATION_TO_CREATE_FILE = {
     isSetCustomLocation: false,
     locationValue: ''
@@ -57,6 +57,7 @@ export class TransferFileComponent implements OnInit {
     this.fileEntriesPathToDisplay = [];
 
     this.platform.ready().then(readySource => {
+      this.ROOT_PATH = window.plugins.GDAppKineticsPlugin.storageLocation;
       this.getDirectoryTreeFileEntries(this.ROOT_PATH);
     });
   }
@@ -106,9 +107,9 @@ export class TransferFileComponent implements OnInit {
     this.fileSystemService.readDirectoryEntries(directoryPath).then((directoryEntries: any) => {
       for (let i = 0; i < directoryEntries.length; i++) {
         if (directoryEntries[i].isDirectory) {
-          this.getDirectoryTreeFileEntries(directoryEntries[i].fullPath);
+          this.getDirectoryTreeFileEntries(directoryEntries[i].nativeURL);
         } else {
-          const currentFilePath = directoryEntries[i].fullPath.substring(1);
+          const currentFilePath = directoryEntries[i].nativeURL;
 
           if (this.checkFileExistsInFilesToDisplayList(currentFilePath)) {
             continue;
