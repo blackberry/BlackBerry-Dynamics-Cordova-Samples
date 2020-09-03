@@ -54,11 +54,12 @@
       class="folder-item"
       *ngIf="entry.isDirectory"
       (click)="openDirectoryByDirectoryEntry(entry)">
-      <ion-icon 
+      <ion-icon
+        class="folder-icon"
         name="folder" 
         color="warning">
       </ion-icon>
-      <p margin-start>{{entry.name}}</p>
+      <p class="entry-name">{{entry.name}}</p>
       <ion-button
         *ngIf="!readonlyDirectoriesPaths.includes(entry.fullPath)"
         (click)="removeDirectoryRecursively($event, entry)"
@@ -73,11 +74,12 @@
       detail="false"
       *ngIf="entry.isFile"
       (click)="showFile(entry)">
-      <ion-icon 
+      <ion-icon
+        class="file-icon"
         name="document"
         color="dark">
       </ion-icon>
-      <p margin-start>{{entry.name}}</p>
+      <p class="entry-name">{{entry.name}}</p>
       <ion-button 
         (click)="removeFile($event, entry)"
         fill="outline"

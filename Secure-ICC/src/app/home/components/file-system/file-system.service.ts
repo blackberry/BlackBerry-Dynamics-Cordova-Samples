@@ -159,7 +159,7 @@ export class FileSystemService {
         };
 
         reader.onerror = (event: any) => {
-          reject(event.target.error);
+          reject(event.target._error);
         };
 
         reader.readAsText(file);

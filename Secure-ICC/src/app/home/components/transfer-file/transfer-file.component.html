@@ -27,10 +27,10 @@
   <h3>Files to send</h3>
   <ion-list>
     <ion-item 
-      *ngFor="let filePath of fileEntriesPathToDisplay; trackBy: trackByPath; let i = index"
+      *ngFor="let file of fileEntries;"
       button
-      (click)="presentSendFileModal(filePath)">
-      {{filePath}}
+      (click)="presentSendFileModal(file.nativeURL)">
+      {{file.fullPath}}
     </ion-item>
   </ion-list>
 
@@ -47,7 +47,7 @@
       <ion-button 
         color="primary" 
         (click)="toogleCreateFileForm()">
-        <ion-icon name="arrow-round-back"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
       <app-create-file-form 
         [location]="LOCATION_TO_CREATE_FILE"

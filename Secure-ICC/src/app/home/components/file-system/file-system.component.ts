@@ -38,7 +38,7 @@ export class FileSystemComponent implements OnInit {
     private fileSystemService: FileSystemService
   ) { }
   ROOT_PATH;
-  readonlyDirectoriesPaths = ['//data', '//Inbox'];
+  readonlyDirectoriesPaths = ['/Inbox/', '/Inbox/data/', '/data/'];
   rootDirectoryEntriesPaths = [];
   currentDirectory;
   isRoot = true;
@@ -49,11 +49,6 @@ export class FileSystemComponent implements OnInit {
       this.ROOT_PATH = window.plugins.GDAppKineticsPlugin.storageLocation;
       this.getRootDirectoryEntries();
     });
-
-    // DEVNOTE: root path directories begins with '/' on iOS and with '//' on Android
-    if (this.platform.is('ios')) {
-      this.readonlyDirectoriesPaths = this.readonlyDirectoriesPaths.map(entry => entry.substring(1));
-    }
   }
 
   getRootDirectoryEntries() {

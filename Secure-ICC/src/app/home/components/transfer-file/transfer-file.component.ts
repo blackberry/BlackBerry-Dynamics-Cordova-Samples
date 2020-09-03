@@ -48,13 +48,13 @@ export class TransferFileComponent implements OnInit {
   createFileButtonState;
   createFileFormState;
   onResumeSubscriber;
-  fileEntriesPathToDisplay;
+  fileEntries;
 
   ngOnInit() {
     this.showFileState = false;
     this.createFileButtonState = true;
     this.createFileFormState = false;
-    this.fileEntriesPathToDisplay = [];
+    this.fileEntries = [];
 
     this.platform.ready().then(readySource => {
       this.ROOT_PATH = window.plugins.GDAppKineticsPlugin.storageLocation;
@@ -109,13 +109,11 @@ export class TransferFileComponent implements OnInit {
         if (directoryEntries[i].isDirectory) {
           this.getDirectoryTreeFileEntries(directoryEntries[i].nativeURL);
         } else {
-          const currentFilePath = directoryEntries[i].nativeURL;
-
-          if (this.checkFileExistsInFilesToDisplayList(currentFilePath)) {
+          if (this.checkFileExistsInFilesToDisplayList(directoryEntries[i])) {
             continue;
           }
 
-          this.fileEntriesPathToDisplay = [...this.fileEntriesPathToDisplay, currentFilePath];
+          this.fileEntries = [...this.fileEntries, directoryEntries[i]];
         }
       }
     }, error => {
@@ -123,8 +121,8 @@ export class TransferFileComponent implements OnInit {
     });
   }
 
-  checkFileExistsInFilesToDisplayList(filePath) {
-    return this.fileEntriesPathToDisplay.filter(filePathToDisplay => filePathToDisplay === filePath).length > 0;
+  checkFileExistsInFilesToDisplayList(entry) {
+    return this.fileEntries.filter(item => entry.fullPath === item.fullPath).length > 0;
   }
 
   async presentSendFileModal(filePath) {
