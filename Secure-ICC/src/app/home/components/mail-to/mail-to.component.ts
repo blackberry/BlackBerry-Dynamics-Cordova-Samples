@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -41,10 +41,11 @@ export class MailToComponent implements OnInit {
     private mailToService: MailToService,
     private fileSystemService: FileSystemService
   ) { }
-  DATA_DIRECTORY_PATH = '/data';
+  DATA_DIRECTORY_PATH;
+  INBOX_PATH = '/Inbox/data';
   LOCATION_TO_CREATE_FILE = {
     isSetCustomLocation: true,
-    locationValue: this.DATA_DIRECTORY_PATH
+    locationValue: '/data'
   };
   mailToForm: FormGroup;
   bbdURLParams;
@@ -58,6 +59,7 @@ export class MailToComponent implements OnInit {
     };
 
     this.platform.ready().then(readySource => {
+      this.DATA_DIRECTORY_PATH = window.plugins.GDAppKineticsPlugin.storageLocation + this.LOCATION_TO_CREATE_FILE.locationValue;
       this.getFilesFromDataDirectory();
     });
 
@@ -93,7 +95,7 @@ export class MailToComponent implements OnInit {
   async creatFileInDataDirectory(fileForm) {
     try {
       const { fileLocation, fileName, fileText } = fileForm.value;
-      const filePath = `${this.DATA_DIRECTORY_PATH}/${fileName}.txt`;
+      const filePath = `${this.LOCATION_TO_CREATE_FILE.locationValue}/${fileName}.txt`;
 
       const createdFileEntry = await this.fileSystemService.createFile(filePath);
 
@@ -119,7 +121,7 @@ export class MailToComponent implements OnInit {
     const { to, cc, bcc, subject, attachments, body } = form.value;
 
     const attachmentPaths = attachments ?
-      attachments.map(attachmentName => `${this.DATA_DIRECTORY_PATH}/${attachmentName}`) : [];
+      attachments.map(attachmentName => `${this.INBOX_PATH}/${attachmentName}`) : [];
 
     const [ firstToEmail, ...toEmails ] = this.normalizeEmails(to);
     const mailToURL = firstToEmail ? new URL('mailto:' + firstToEmail) : new URL('mailto:');

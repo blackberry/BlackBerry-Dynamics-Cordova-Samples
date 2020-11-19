@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -49,7 +49,7 @@ export class ApplicationInfoComponent implements OnInit {
   }
 
   getPlatformName() {
-    this.platformName = this.platform.is('ios') ? 'iOS' : 'Android';
+    this.platformName = this.platform.is('android') ? 'Android': 'iOS';
   }
 
   getVersion() {
@@ -64,9 +64,9 @@ export class ApplicationInfoComponent implements OnInit {
     this.applicationInfoService.getApplicationConfigInfo().then((configInfo: any) => {
       this.applicationConfigInfo = {
         ...configInfo,
-        communicationProtocols: this.platform.is('ios') ?
-          this.handleCommunicationProtocolsObjForiOS(configInfo.communicationProtocols) :
-          this.handleCommunicationProtocolsObjForAndroid(configInfo.communicationProtocols)
+        communicationProtocols: this.platform.is('android') ?
+          this.handleCommunicationProtocolsObjForAndroid(configInfo.communicationProtocols) :
+          this.handleCommunicationProtocolsObjForiOS(configInfo.communicationProtocols)
       };
     }, error => {
       alert('Error:' + error.code);

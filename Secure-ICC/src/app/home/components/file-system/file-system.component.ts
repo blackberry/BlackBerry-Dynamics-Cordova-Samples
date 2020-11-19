@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -37,9 +37,8 @@ export class FileSystemComponent implements OnInit {
     private modalCtrl: ModalController,
     private fileSystemService: FileSystemService
   ) { }
-  ROOT_PATH = '/';
-  RECIEVED_FILES_PATH = '/Inbox/';
-  readonlyDirectoriesPaths = ['//data', '//Inbox'];
+  ROOT_PATH;
+  readonlyDirectoriesPaths = ['/Inbox/', '/Inbox/data/', '/data/'];
   rootDirectoryEntriesPaths = [];
   currentDirectory;
   isRoot = true;
@@ -47,14 +46,9 @@ export class FileSystemComponent implements OnInit {
 
   ngOnInit() {
     this.platform.ready().then(readySource => {
+      this.ROOT_PATH = window.plugins.GDAppKineticsPlugin.storageLocation;
       this.getRootDirectoryEntries();
-      this.createDirectory(this.RECIEVED_FILES_PATH);
     });
-
-    // DEVNOTE: root path directories begins with '/' on iOS and with '//' on Android
-    if (this.platform.is('ios')) {
-      this.readonlyDirectoriesPaths = this.readonlyDirectoriesPaths.map(entry => entry.substring(1));
-    }
   }
 
   getRootDirectoryEntries() {
@@ -93,7 +87,7 @@ export class FileSystemComponent implements OnInit {
 
   async openDirectoryByDirectoryEntry(directoryEntry) {
     try {
-      this.currentDirectoryEntries = await this.fileSystemService.readDirectoryEntries(directoryEntry.fullPath);
+      this.currentDirectoryEntries = await this.fileSystemService.readDirectoryEntries(directoryEntry.nativeURL);
       this.currentDirectory = directoryEntry;
       this.isRoot = false;
     } catch (error) {

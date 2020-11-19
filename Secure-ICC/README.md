@@ -9,11 +9,11 @@ This sample application is written using the Ionic framework. It demonstrates us
 
 ## Requirements
 * Node 10.x.x
-* Ionic 4
+* Ionic 5
 * Cordova 9
-* Dynamics SDK for Cordova v7
-* Dynamics SDK for iOS v7
-* Dynamics SDK for Android v7
+* Dynamics SDK for Cordova v8
+* Dynamics SDK for iOS v8.1
+* Dynamics SDK for Android v8.1
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)

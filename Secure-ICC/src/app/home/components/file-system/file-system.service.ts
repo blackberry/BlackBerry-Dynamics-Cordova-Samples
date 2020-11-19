@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -29,7 +29,7 @@ export class FileSystemService {
 
   requestFileSystem() {
     return new Promise((resolve, reject) => {
-      window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystem => {
+      window.requestFileSystem(LocalFileSystem.APPKINETICS, 0, fileSystem => {
         this.gdFileSystem = fileSystem;
         resolve(fileSystem);
       }, error => {
@@ -103,12 +103,21 @@ export class FileSystemService {
 
   readDirectoryEntries(directoryPath) {
     return new Promise((resolve, reject) => {
-      const directoryReader = new window.DirectoryReader(directoryPath);
-      directoryReader.readEntries(entries => {
-        resolve(entries);
-      }, error => {
-        reject(error);
-      });
+      const errorCallback = (error: any) => reject(error);
+
+      const successCallback = (dirEntry: any) => {
+        const directoryReader = dirEntry.createReader();
+        directoryReader.readEntries(
+          (entries: any) => resolve(entries),
+          errorCallback
+        );
+      };
+
+      window.resolveLocalFileSystemURL(
+        directoryPath,
+        successCallback,
+        errorCallback
+      );
     });
   }
 
@@ -142,17 +151,21 @@ export class FileSystemService {
 
   readFile(gdFileEntry) {
     return new Promise((resolve, reject) => {
-      const reader = new FileReader();
+      gdFileEntry.file((file: any) => {
+        const reader = new FileReader();
 
-      reader.onload = (event: any) => {
-        resolve(event.target.result);
-      };
+        reader.onload = (event: any) => {
+          resolve(event.target._result);
+        };
 
-      reader.onerror = (event: any) => {
-        reject(event.target.error);
-      };
+        reader.onerror = (event: any) => {
+          reject(event.target._error);
+        };
 
-      reader.readAsText(gdFileEntry);
+        reader.readAsText(file);
+      }, (error) => {
+        reject(error);
+      })
     });
   }
 
