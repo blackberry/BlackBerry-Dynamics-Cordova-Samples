@@ -21,25 +21,25 @@
 */
 -->
 
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-padding ion-no-margin">
+  <ion-toolbar class="ion-no-padding ion-no-margin">
     <ion-segment [(ngModel)]="activeTab">
       <ion-segment-button value="applicationInfo">
-        <ion-icon name="information-circle-outline" padding></ion-icon>
+        <ion-icon name="information-circle-outline" class="ion-padding"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="fileTransfer">
-        <ion-icon name="file-tray" padding></ion-icon>
+        <ion-icon name="file-tray" class="ion-padding"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="mailTo">
-        <ion-icon name="send" padding></ion-icon>
+        <ion-icon name="send" class="ion-padding"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="fileSystem">
-        <ion-icon name="folder" padding></ion-icon>
+        <ion-icon name="folder" class="ion-padding"></ion-icon>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
-<ion-content padding no-bounce>
+<ion-content class="ion-padding-vertical" no-bounce>
   <div class="container" *ngIf="activeTab === 'applicationInfo'">
     <app-application-info></app-application-info>
   </div>

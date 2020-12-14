@@ -92,13 +92,24 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   async handleReceivedFile(filePath) {
+    let receivedFileEntry;
+    let receivedFileData;
+
     try {
-      const receivedFileEntry = await this.fileSystemService.getFile(filePath);
-      const receivedFileData = await this.fileSystemService.readFile(receivedFileEntry);
+      receivedFileEntry = await this.fileSystemService.getFile(filePath);
+      receivedFileData = await this.fileSystemService.readFile(receivedFileEntry);
 
       this.presentReceiveFileModal(receivedFileEntry, receivedFileData);
     } catch (error) {
-      alert('Error:' + error.code);
+      const errorCode = error.code;
+      if (errorCode === 5) {
+        this.presentReceiveFileModal(
+          receivedFileEntry,
+          'Encoding error: content of the file is not supported by FileReader!'
+        );
+      } else {
+        alert('Error:' + errorCode);
+      }
     }
   }
 

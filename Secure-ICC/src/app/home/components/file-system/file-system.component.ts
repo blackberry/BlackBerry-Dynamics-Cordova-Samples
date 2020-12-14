@@ -99,7 +99,12 @@ export class FileSystemComponent implements OnInit {
     this.fileSystemService.readFile(fileEntry).then(fileEntryData => {
       this.presentFileModal(fileEntry, fileEntryData);
     }, error => {
-      alert('Error:' + error.code);
+      const errorCode = error.code;
+      if (errorCode === 5) {
+        this.presentFileModal(fileEntry, 'Encoding error: content of the file is not supported by FileReader!');
+      } else {
+        alert('Error:' + errorCode);
+      }
     });
   }
 

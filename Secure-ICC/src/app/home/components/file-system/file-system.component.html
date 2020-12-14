@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -22,17 +22,17 @@
 -->
 
 <section class="filesystem-explorer">
-  <h2>Secure Storage</h2>
+  <h2 class="ion-padding-start">Secure Storage</h2>
 
   <div class="current-directory">
     <h2 
       *ngIf="isRoot" 
-      margin-start>
+      class="ion-padding-start">
       root:
     </h2>
     <h2 
       *ngIf="!isRoot" 
-      margin-start>
+      class="ion-padding-start">
       {{currentDirectory.name}}:
     </h2>
   </div>
