@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2020 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -23,11 +23,11 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>Recieving file...</ion-title>
+    <ion-title>Receiving file...</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
-  <p>Successfully received {{receivedFile.name}}!</p>
+<ion-content>
+  <p class="ion-padding-horizontal">Successfully received {{receivedFile.name}}!</p>
   <app-show-file
     [file]="receivedFile" 
     [fileBody]="receivedFileData"
