@@ -22,9 +22,9 @@
 -->
 
 <section class="transfer-file">
-  <h2>AppKinetics</h2>
+  <h2 class="ion-padding-start">AppKinetics</h2>
 
-  <h3>Files to send</h3>
+  <h3 class="ion-padding-start">Files to send</h3>
   <ion-list>
     <ion-item 
       *ngFor="let file of fileEntries;"
@@ -45,7 +45,7 @@
 
     <div *ngIf="createFileFormState">
       <ion-button 
-        color="primary" 
+        color="primary"
         (click)="toogleCreateFileForm()">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
