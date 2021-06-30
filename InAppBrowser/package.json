@@ -1,0 +1,17 @@
+{
+  "name": "com.blackberry.bbd.example.cdv.blank",
+  "version": "1.0.0",
+  "description": "InAppBrowser sample application demonstrates usage of BlackBerry Dynamics Cordova InAppBrowser plugin",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "cordova-plugin-bbd-inappbrowser": "git+https://github.com/blackberry/BlackBerry-Dynamics-Cordova-Plugins#inappbrowser",
+    "cordova-plugin-bbd-base": "file:../../plugins/cordova-plugin-bbd-base"
+  },
+  "devDependencies": {},
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-bbd-base": {},
+      "cordova-plugin-bbd-inappbrowser": {}
+    }
+  }
+}
