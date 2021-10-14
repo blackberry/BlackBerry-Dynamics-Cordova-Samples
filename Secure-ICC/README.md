@@ -27,7 +27,7 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Move Secure-ICC application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
 * Open Secure-ICC in Terminal window:  
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/Secure-ICC`
-* For iOS:	
+* For iOS:
 * `$ ionic cordova platform add ios`
 * `$ ionic cordova build ios`
 * AND/OR for Android:
