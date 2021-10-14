@@ -11,9 +11,9 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Node 10.x.x
 * Ionic 5
 * Cordova 10
-* Dynamics SDK for Cordova v9.0
-* Dynamics SDK for iOS v9.1, v9.2
-* Dynamics SDK for Android v9.1, v9.2
+* Dynamics SDK for Cordova v10.0
+* Dynamics SDK for iOS v10.0
+* Dynamics SDK for Android v10.0
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
@@ -27,9 +27,7 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Move Secure-ICC application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
 * Open Secure-ICC in Terminal window:  
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/Secure-ICC`
-* Install the plugin `cordova-plugin-bbd-configure` (for non-default options of Configure plugin installation see README.md at the root of `BlackBerry_Dynamics_SDK_for_Cordova_<version>`):  
-`$ ionic cordova plugin add <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/plugins/cordova-plugin-bbd-configure`
-* For iOS:	
+* For iOS:
 * `$ ionic cordova platform add ios`
 * `$ ionic cordova build ios`
 * AND/OR for Android:
