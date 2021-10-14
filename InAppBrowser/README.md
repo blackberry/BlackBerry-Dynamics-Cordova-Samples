@@ -5,17 +5,15 @@ This sample application demonstrates usage of `cordova.InAppBrowser.open` API of
 ## Requirements
 * Node 10.x.x
 * Cordova 10
-* Dynamics SDK for Cordova v9.0
-* Dynamics SDK for iOS v9.1, v9.2
-* Dynamics SDK for Android v9.1, v9.2
+* Dynamics SDK for Cordova v10.0
+* Dynamics SDK for iOS v10.0
+* Dynamics SDK for Android v10.0
 
 ## How To Build and Deploy
 * Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/latest)
 * Move `InAppBrowser` application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
 * Open InAppBrowser in Terminal window:  
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/InAppBrowser`
-* Install the plugin `cordova-plugin-bbd-configure` (for non-default options of Configure plugin installation see README.md at the root of `BlackBerry_Dynamics_SDK_for_Cordova_<version>`):  
-`$ cordova plugin add <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/plugins/cordova-plugin-bbd-configure`
 * For iOS:
 * `$ cordova platform add ios`
 * `$ cordova build ios`
