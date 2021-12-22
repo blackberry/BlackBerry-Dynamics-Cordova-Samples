@@ -35,7 +35,6 @@
     "cordova-plugin-bbd-base": "file:../../plugins/cordova-plugin-bbd-base",
     "cordova-plugin-bbd-storage": "file:../../plugins/cordova-plugin-bbd-storage",
     "cordova-plugin-bbd-appkinetics": "file:../../plugins/cordova-plugin-bbd-appkinetics",
-    "cordova-plugin-bbd-interappcommunication": "file:../../plugins/cordova-plugin-bbd-interappcommunication",
     "cordova-plugin-bbd-application": "file:../../plugins/cordova-plugin-bbd-application",
     "cordova-plugin-bbd-mailto": "file:../../plugins/cordova-plugin-bbd-mailto"
   },
@@ -67,7 +66,6 @@
       "cordova-plugin-bbd-base": {},
       "cordova-plugin-bbd-storage": {},
       "cordova-plugin-bbd-appkinetics": {},
-      "cordova-plugin-bbd-interappcommunication": {},
       "cordova-plugin-bbd-application": {},
       "cordova-plugin-bbd-mailto": {}
     }
