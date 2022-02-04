@@ -8,12 +8,12 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Secure Storage Management
 
 ## Requirements
-* Node 10.x.x
-* Ionic 5
-* Cordova 10
-* Dynamics SDK for Cordova v10.0
-* Dynamics SDK for iOS v10.0
-* Dynamics SDK for Android v10.0
+* Node 12.x.x
+* Ionic 6
+* Cordova 11
+* Dynamics SDK for Cordova v10.1
+* Dynamics SDK for iOS v10.2
+* Dynamics SDK for Android v10.2
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
@@ -27,6 +27,8 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Move Secure-ICC application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
 * Open Secure-ICC in Terminal window:  
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/Secure-ICC`
+* Add `cordova-plugin-bbd-base` plugin:  
+`$ ionic cordova plugin add <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/plugins/cordova-plugin-bbd-base`
 * For iOS:
 * `$ ionic cordova platform add ios`
 * `$ ionic cordova build ios`
