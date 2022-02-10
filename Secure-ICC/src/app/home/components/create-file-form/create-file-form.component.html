@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2022 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -25,8 +25,7 @@
   <h2 class="ion-padding-start">File</h2>
   
   <form 
-    [formGroup]="createFileForm" 
-    (ngSubmit)="onSubmit(createFileForm)">
+    [formGroup]="createFileForm">
 
     <ion-item>
       <ion-label>Location:</ion-label>
@@ -63,12 +62,12 @@
         </ion-button>
       </div>
       <div class="col-45">
-        <ion-button 
-          type="submit" 
+        <ion-button
           color="primary"
           expand="full"
           shape="round"
-          [disabled]="createFileForm.invalid">
+          [disabled]="createFileForm.invalid"
+          (click)="onSubmit(createFileForm)">
           Create
         </ion-button>
       </div>
