@@ -1,0 +1,7 @@
+{
+  "name": "CapacitorSecureICC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

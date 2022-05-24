@@ -1,0 +1,75 @@
+<!--
+/*
+* Copyright 2022 BlackBerry Ltd.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+-->
+
+<section class="transfer-file">
+  <h2 class="ion-padding-start">AppKinetics</h2>
+
+  <h3 class="ion-padding-start">Files to send</h3>
+  <ion-list>
+    <ion-item 
+      *ngFor="let file of fileEntries;"
+      button
+      (click)="presentSendFileModal(file.nativeURL)">
+      {{file.fullPath}}
+    </ion-item>
+  </ion-list>
+
+  <div>
+    <ion-button 
+      color="primary"
+      expand="block" 
+      *ngIf="createFileButtonState"
+      (click)="toogleCreateFileForm()"> 
+      Create File
+    </ion-button>
+
+    <div *ngIf="createFileFormState">
+      <ion-button 
+        color="primary"
+        (click)="toogleCreateFileForm()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <app-create-file-form 
+        [location]="LOCATION_TO_CREATE_FILE"
+        (submitForm)="onSubmitCreateFileForm($event)">
+      </app-create-file-form>
+    </div>
+    
+    <app-show-file 
+      [file]="createdFileEntry" 
+      [fileBody]="createdFileData" 
+      *ngIf="showFileState">
+    </app-show-file>
+
+  </div>
+
+  <ion-button 
+    color="primary"
+    expand="full" 
+    shape="round" 
+    *ngIf="showFileState" 
+    (click)="hideShowFile()">
+    Ok
+  </ion-button>
+
+</section>
