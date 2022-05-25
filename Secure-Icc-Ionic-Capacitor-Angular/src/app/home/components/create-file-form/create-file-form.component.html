@@ -1,0 +1,79 @@
+<!--
+/*
+* Copyright 2022 BlackBerry Ltd.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+-->
+
+<section class="create-file-form">
+  <h2 class="ion-padding-start">File</h2>
+  
+  <form 
+    [formGroup]="createFileForm">
+
+    <ion-item>
+      <ion-label>Location:</ion-label>
+      <ion-input 
+        type="text" 
+        formControlName="fileLocation">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input 
+        type="text" 
+        formControlName="fileName">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea 
+        placeholder="Enter text..."
+        rows="4" 
+        formControlName="fileText">
+      </ion-textarea>
+    </ion-item>
+
+    <div class="buttons-row">
+      <div class="col-45">
+        <ion-button 
+          shape="round" 
+          color="primary"
+          expand="full"
+          shape="round" 
+          fill="outline" 
+          (click)="onReset(createFileForm)">
+          Reset
+        </ion-button>
+      </div>
+      <div class="col-45">
+        <ion-button
+          color="primary"
+          expand="full"
+          shape="round"
+          [disabled]="createFileForm.invalid"
+          (click)="onSubmit(createFileForm)">
+          Create
+        </ion-button>
+      </div>
+    </div>
+  
+  </form>
+
+</section>
+

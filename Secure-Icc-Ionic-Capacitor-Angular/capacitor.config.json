@@ -1,0 +1,6 @@
+{
+	"appId": "com.blackberry.bbd.example.ion.secureicc",
+	"appName": "CapacitorSecureICC",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

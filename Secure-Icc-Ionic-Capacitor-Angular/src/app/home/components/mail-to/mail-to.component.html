@@ -1,0 +1,121 @@
+<!--
+/*
+* Copyright 2022 BlackBerry Ltd.
+*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+-->
+
+<section class="mail-to">
+  <h2 class="ion-padding-start">MailTo</h2>
+
+  <form 
+    [formGroup]="mailToForm">
+
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-input 
+        type="text" 
+        formControlName="to">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cc</ion-label>
+      <ion-input 
+        type="text" 
+        formControlName="cc">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bcc</ion-label>
+      <ion-input 
+        type="text" 
+        formControlName="bcc">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Subject</ion-label>
+      <ion-input 
+      type="text" 
+      formControlName="subject">
+    </ion-input>
+    </ion-item>
+
+    <ion-button 
+      expand="block" 
+      (click)="presentNewFileModal()">
+      <p>New text attachment</p>
+      <ion-icon name="document"></ion-icon>
+    </ion-button>
+
+    <ion-item class="attachments-dropdown">
+      <ion-icon name="attach"></ion-icon>
+      <ion-select 
+        formControlName="attachments" 
+        multiple="true"
+        selectedText="Attachments"
+        [interfaceOptions]="customSelectOptions">
+        <ion-select-option 
+          *ngFor="let fileEntry of availableFileEntries; trackBy: trackByPath; let i = index" 
+          [value]="fileEntry.name">
+          {{fileEntry.name}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <section class="ionic-chips">
+      <ion-chip *ngFor="let selectedAttachmentName of mailToForm.value.attachments; let i = index">
+        <ion-icon name="document"></ion-icon>
+        <ion-label>{{selectedAttachmentName}}</ion-label>
+      </ion-chip>
+    </section>
+    
+    <ion-item>
+      <ion-textarea 
+        placeholder="Enter text..." 
+        formControlName="body" 
+        rows="5">
+      </ion-textarea>
+    </ion-item>
+
+    <div class="buttons-row">
+      <div class="col-45">
+        <ion-button 
+          shape="round" 
+          color="primary"
+          expand="full" 
+          fill="outline" 
+          (click)="onReset(mailToForm)">
+          Reset
+        </ion-button>
+      </div>
+      <div class="col-45">
+        <ion-button
+          shape="round"
+          color="primary"
+          expand="full"
+          [disabled]="mailToForm.invalid"
+          (click)="onSubmit(mailToForm)">
+          Send
+        </ion-button>
+      </div>
+    </div>
+
+  </form>
+
+</section>
