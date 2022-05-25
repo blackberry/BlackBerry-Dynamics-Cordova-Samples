@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2020 BlackBerry Ltd.
+* Copyright 2022 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -25,8 +25,7 @@
   <h2 class="ion-padding-start">MailTo</h2>
 
   <form 
-    [formGroup]="mailToForm" 
-    (ngSubmit)="onSubmit(mailToForm)">
+    [formGroup]="mailToForm">
 
     <ion-item>
       <ion-label>To</ion-label>
@@ -106,12 +105,12 @@
         </ion-button>
       </div>
       <div class="col-45">
-        <ion-button 
-          type="submit" 
+        <ion-button
           shape="round"
           color="primary"
           expand="full"
-          [disabled]="mailToForm.invalid">
+          [disabled]="mailToForm.invalid"
+          (click)="onSubmit(mailToForm)">
           Send
         </ion-button>
       </div>

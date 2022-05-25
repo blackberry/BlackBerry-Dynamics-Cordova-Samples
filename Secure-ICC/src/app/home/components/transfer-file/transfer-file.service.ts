@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2021 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -28,7 +28,7 @@ export class TransferFileService {
 
   getListOfAvailableGDApplications(serviceId, serviceVersion) {
     return new Promise((resolve, reject) => {
-      window.plugins.GDInterAppCommunication.getGDAppDetails(serviceId, serviceVersion, applications => {
+      window.plugins.GDAppKineticsPlugin.getServiceProvidersFor(serviceId, serviceVersion, applications => {
         resolve(applications);
       }, error => {
         reject(error);

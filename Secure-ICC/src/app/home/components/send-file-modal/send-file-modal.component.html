@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2020 BlackBerry Ltd.
+* Copyright 2022 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -33,8 +33,7 @@
 <ion-content class="ion-padding">
 
   <form
-    *ngIf="isAvailableAppToSendFile"
-    (ngSubmit)="submitSelectedAppToSendFiles()">
+    *ngIf="isAvailableAppToSendFile">
     <ion-list>
       <ion-radio-group
         [(ngModel)]="selectedAppToSend"
@@ -48,12 +47,12 @@
         </ion-item>
       </ion-radio-group>
     </ion-list>
-    <ion-button 
-      type="submit"
+    <ion-button
       class="ion-margin-vertical"
       color="primary"
       shape="round"
-      expand="block">
+      expand="block"
+      (click)="submitSelectedAppToSendFiles()">
       Send to app
     </ion-button>
   </form>

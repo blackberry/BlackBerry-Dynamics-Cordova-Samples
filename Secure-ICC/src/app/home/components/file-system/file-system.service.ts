@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 BlackBerry Ltd.
+* Copyright 2022 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -133,7 +133,7 @@ export class FileSystemService {
   }
 
   writeFile(dataToWrite, gdFileEntry) {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       gdFileEntry.createWriter(fileWriter => {
 
         fileWriter.onwrite = () => {
@@ -170,7 +170,7 @@ export class FileSystemService {
   }
 
   removeFile(gdFileEntry) {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       gdFileEntry.remove(() => {
         resolve();
       }, error => {
@@ -180,7 +180,7 @@ export class FileSystemService {
   }
 
   removeDirectoryRecursively(gdDirectoryEntry) {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       gdDirectoryEntry.removeRecursively(() => {
         resolve();
       }, error => {
