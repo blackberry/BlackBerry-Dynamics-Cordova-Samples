@@ -5,9 +5,9 @@ This sample application demonstrates usage of `cordova.InAppBrowser.open` API of
 ## Requirements
 * Node 12.x.x
 * Cordova 11
-* Dynamics SDK for Cordova v10.1
-* Dynamics SDK for iOS v10.2, v10.1
-* Dynamics SDK for Android v10.2, v10.1
+* Dynamics SDK for Cordova v11.0
+* Dynamics SDK for iOS v11.0
+* Dynamics SDK for Android v11.0
 
 ## How To Build and Deploy
 * Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/latest)

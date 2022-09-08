@@ -12,10 +12,10 @@ Features include:
 
 ## Requirements
 * Node 12.x.x
-* Ionic 6 + Capacitor + Angular
-* Dynamics SDK for Cordova 10.1
-* Dynamics SDK for iOS 10.2
-* Dynamics SDK for Android 10.2
+* Ionic 6 + Capacitor 4 + Angular
+* Dynamics SDK for Cordova 11.0
+* Dynamics SDK for iOS 11.0
+* Dynamics SDK for Android 11.0
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Bohdan Pidluzhnyy](mailto:bpidluzhnyy@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
