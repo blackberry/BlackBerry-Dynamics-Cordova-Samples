@@ -11,11 +11,11 @@ Features include:
 * Secure Storage management
 
 ## Requirements
-* Node 12.x.x
+* Node 18.x.x
 * Ionic 6 + Capacitor 4 + Angular
-* Dynamics SDK for Cordova 11.0
-* Dynamics SDK for iOS 11.0
-* Dynamics SDK for Android 11.0
+* Dynamics SDK for Cordova 11.1
+* Dynamics SDK for iOS 11.1, 11.2
+* Dynamics SDK for Android 11.1, 11.2
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Bohdan Pidluzhnyy](mailto:bpidluzhnyy@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)
@@ -31,8 +31,8 @@ Features include:
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/Secure-ICC-Ionic-Capacitor-Angular`
 `$ npm i`
 * Add platform:
-`$ ionic cap add ios`
-`$ ionic cap add android`
+`$ npx cap add ios`
+`$ npx cap add android`
 * Add Capacitor Base plugin:
 `$ npm i git+https://github.com/blackberry/blackberry-dynamics-cordova-plugins#capacitor-base`
 * Build project:
