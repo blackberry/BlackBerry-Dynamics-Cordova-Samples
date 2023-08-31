@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2022 BlackBerry Limited. All Rights Reserved.
+ * Copyright (c) 2023 BlackBerry Limited. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
+import path from 'path';
+import fs from 'fs';
+import fse from 'fs-extra';
+import shell from 'shelljs';
+
 (function() {
-    const shell = require('shelljs'),
-        fse = require('fs-extra'),
-        path = require('path'),
-        fs = require('fs'),
-        projectRoot = process.env.INIT_CWD,
+    const projectRoot = process.env.INIT_CWD,
         androidProjectRoot = path.join(projectRoot, 'android'),
         iosProjectRoot = path.join(projectRoot, 'ios'),
         projectDataPath = path.join(projectRoot, 'src', 'data'),

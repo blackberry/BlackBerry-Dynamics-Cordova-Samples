@@ -28,10 +28,10 @@
     "@ionic/angular": "^6.0.0",
     "cordova-plugin-bbd-appkinetics": "file:../../plugins/cordova-plugin-bbd-appkinetics",
     "cordova-plugin-bbd-application": "file:../../plugins/cordova-plugin-bbd-application",
-    "cordova-plugin-bbd-file": "git+https://github.com/blackberry/BlackBerry-Dynamics-Cordova-Plugins#file",
+    "cordova-plugin-bbd-file": "git+https://github.com/blackberry/BlackBerry-Dynamics-Cordova-Plugins.git#file",
     "cordova-plugin-bbd-mailto": "file:../../plugins/cordova-plugin-bbd-mailto",
     "cordova-plugin-bbd-storage": "file:../../plugins/cordova-plugin-bbd-storage",
-    "cordova-plugin-bbd-sqlite-storage": "git+https://github.com/blackberry/BlackBerry-Dynamics-Cordova-Plugins#sqlite-storage",
+    "cordova-plugin-bbd-sqlite-storage": "git+https://github.com/blackberry/BlackBerry-Dynamics-Cordova-Plugins.git#sqlite-storage",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
