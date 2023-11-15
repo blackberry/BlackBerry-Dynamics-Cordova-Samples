@@ -1,5 +1,5 @@
 <!--
-    Copyright 2021 BlackBerry Ltd.
+    Copyright 2023 BlackBerry Ltd.
 
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -31,6 +31,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="scheme" value="app" />
+    <preference name="hostname" value="localhost" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>

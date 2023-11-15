@@ -3,17 +3,19 @@
 This sample application demonstrates usage of `cordova.InAppBrowser.open` API of BlackBerry Dynamics Cordova InAppBrowser plugin to securely open helpful articles, videos, and web resources inside of your app without leaving your app.
 
 ## Requirements
-* Node 12.x.x
-* Cordova 11
-* Dynamics SDK for Cordova v11.0
-* Dynamics SDK for iOS v11.0
-* Dynamics SDK for Android v11.0
+* Node 18.x.x
+* Cordova 11.0, 11.1, 12.0
+* Dynamics SDK for Cordova v12.0
+* Dynamics SDK for iOS v12.0 or previous releases (v11.1, v11.2)
+* Dynamics SDK for Android v12.0 or previous releases (v11.1, v11.2)
 
 ## How To Build and Deploy
-* Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/latest)
+* Setup your BlackBerry Dynamics environment. See [Getting Started with Blackberry SDK for Cordova](https://docs.blackberry.com/en/development-tools/blackberry-dynamics-sdk-cordova/)
 * Move `InAppBrowser` application to the `SampleApplications` directory of `BlackBerry_Dynamics_SDK_for_Cordova` package
 * Open InAppBrowser in Terminal window:  
 `$ cd <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/SampleApplications/InAppBrowser`
+* Install the plugin `cordova-plugin-bbd-base`:  
+`$ cordova plugin add <path>/BlackBerry_Dynamics_SDK_for_Cordova_<version>/plugins/cordova-plugin-bbd-base`
 * For iOS:
 * `$ cordova platform add ios`
 * `$ cordova build ios`
