@@ -8,12 +8,12 @@ This sample application is written using the Ionic framework. It demonstrates us
 * Secure Storage Management
 
 ## Requirements
-* Node 14.x.x
-* Ionic 6
-* Cordova 11.0.0, 11.1.0
-* Dynamics SDK for Cordova v11.1
-* Dynamics SDK for iOS v11.1, v11.2
-* Dynamics SDK for Android v11.1, v11.2
+* Node 18.x.x
+* Ionic 7
+* Cordova 11.0, 11.1, 12.0
+* Dynamics SDK for Cordova v12.0
+* Dynamics SDK for iOS v12.0 or previous releases (v11.1, v11.2)
+* Dynamics SDK for Android v12.0 or previous releases (v11.1, v11.2)
 
 ## Author(s)
 * [Volodymyr Taliar](mailto:vtaliar@blackberry.com), [Taras Brateiko](mailto:tbrateiko@blackberry.com), [Taras Omelchuk](mailto:tomelchuk@blackberry.com)

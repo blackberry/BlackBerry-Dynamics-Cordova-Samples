@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -20,7 +20,7 @@
 */
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Platform, ModalController, NavParams } from '@ionic/angular';
 
 import { CreateFileModalComponent } from './create-file-modal/create-file-modal.component';
@@ -37,7 +37,7 @@ export class MailToComponent implements OnInit {
   constructor(
     private platform: Platform,
     private modalCtrl: ModalController,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private mailToService: MailToService,
     private fileSystemService: FileSystemService
   ) { }
@@ -47,7 +47,7 @@ export class MailToComponent implements OnInit {
     isSetCustomLocation: true,
     locationValue: '/data'
   };
-  mailToForm: FormGroup;
+  mailToForm: UntypedFormGroup;
   bbdURLParams;
   dataDirectoryEntry;
   availableFileEntries;

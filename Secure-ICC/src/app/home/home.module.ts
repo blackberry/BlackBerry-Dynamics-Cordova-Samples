@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -63,9 +63,6 @@ import { MailToService } from './components/mail-to/mail-to.service';
     FileSystemService,
     TransferFileService,
     MailToService
-  ],
-  entryComponents: [
-    ReceiveFileModalComponent
   ]
 })
 export class HomePageModule {}

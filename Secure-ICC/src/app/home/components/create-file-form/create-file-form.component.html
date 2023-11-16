@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2022 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -23,40 +23,40 @@
 
 <section class="create-file-form">
   <h2 class="ion-padding-start">File</h2>
-  
-  <form 
+
+  <form
     [formGroup]="createFileForm">
 
     <ion-item>
-      <ion-label>Location:</ion-label>
-      <ion-input 
-        type="text" 
+      <ion-input
+        type="text"
+        label="Location:"
         formControlName="fileLocation">
       </ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Name:</ion-label>
-      <ion-input 
-        type="text" 
+      <ion-input
+        type="text"
+        label="Name:"
         formControlName="fileName">
       </ion-input>
     </ion-item>
     <ion-item>
-      <ion-textarea 
+      <ion-textarea
         placeholder="Enter text..."
-        rows="4" 
+        rows="4"
         formControlName="fileText">
       </ion-textarea>
     </ion-item>
 
     <div class="buttons-row">
       <div class="col-45">
-        <ion-button 
-          shape="round" 
+        <ion-button
+          shape="round"
           color="primary"
           expand="full"
-          shape="round" 
-          fill="outline" 
+          shape="round"
+          fill="outline"
           (click)="onReset(createFileForm)">
           Reset
         </ion-button>
@@ -72,7 +72,7 @@
         </ion-button>
       </div>
     </div>
-  
+
   </form>
 
 </section>

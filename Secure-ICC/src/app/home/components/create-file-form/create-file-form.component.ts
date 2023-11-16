@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -20,7 +20,7 @@
 */
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-file-form',
@@ -32,11 +32,11 @@ export class CreateFileFormComponent implements OnInit {
   @Output() submitForm = new EventEmitter();
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) { }
   FILE_NAME = 'testfilename';
   FILE_TEXT = 'Test data for creating new text attachment in secure storage.';
-  createFileForm: FormGroup;
+  createFileForm: UntypedFormGroup;
   fileLocation = {
     value: '/',
     disabled: false

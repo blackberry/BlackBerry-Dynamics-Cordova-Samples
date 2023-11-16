@@ -1,6 +1,6 @@
 <!--
 /*
-* Copyright 2022 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -42,8 +42,7 @@
           Available Apps To Send
         </ion-list-header>
         <ion-item *ngFor="let app of availableApps; let i = index">
-          <ion-label>{{app.name}}</ion-label>
-          <ion-radio [value]="app.address"></ion-radio>
+          <ion-radio [value]="app.address">{{app.name}}</ion-radio>
         </ion-item>
       </ion-radio-group>
     </ion-list>

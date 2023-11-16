@@ -1,5 +1,5 @@
 /*
-* Copyright 2019 BlackBerry Ltd.
+* Copyright 2023 BlackBerry Ltd.
 *
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -52,9 +52,6 @@ import { FileSystemService } from '../file-system/file-system.service';
   providers: [
     TransferFileService,
     FileSystemService
-  ],
-  entryComponents: [
-    SendFileModalComponent
   ]
 })
 export class TransferFileModule { }
